@@ -66,7 +66,7 @@ export default function ChatFrame (){
             <div className="content">
                 <div className="contact-profile">
                     <img src="/src/images/cybrosys.png" alt="" />
-                    <p>Cybro Bot</p>
+                    <p>ChatBot</p>
                     <Sidebar/>
                 </div>
                 <Messages/>
