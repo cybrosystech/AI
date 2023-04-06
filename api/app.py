@@ -44,6 +44,9 @@ async def send_message(message: Data):
     except openai.error.AuthenticationError:
         return {"message": "Incorrect API key provided in settings",
                 "error": True}
+    except openai.error.RateLimitError:
+        return {"message": "API rate limit exceeded",
+                "error": True}
 
 
 class GPTData(BaseModel):
@@ -77,6 +80,9 @@ async def get_result(gpt: GPTData):
     except openai.error.AuthenticationError as e:
         return {"conversation": gpt.conversation,
                 "message": "Incorrect API key provided in settings",
+                "error": True}
+    except openai.error.RateLimitError:
+        return {"message": "API rate limit exceeded",
                 "error": True}
 
 uvicorn.run(app, host="0.0.0.0", port=8000)
