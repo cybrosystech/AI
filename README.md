@@ -203,7 +203,7 @@ text = response.choices[0].message.content
 ```
 
 
-**5. Google Text to Speech (gTTS) library to convert the response's text to speech and Send back the spoken answer on UI.**
+**5. Google Text to Speech (gTTS) library to convert the response's text to speech.**
 
 **      **
 
