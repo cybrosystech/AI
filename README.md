@@ -24,7 +24,7 @@ Conversion notes:
 ----->
 
 
-Learn How to Create a Voice Chatbot using Openai's API 
+# Learn How to Create a Voice Chatbot using Openai's API
 
 The potential of voice chatbots to deliver a more personalized and interactive experience has made their adoption more and more widespread in recent years. In this blog, we will explore the features and functions of a voice chatbot that utilizes multilingual voice and text support, React, GPT-3.5 turbo language model, Whisper AI, and a Python backend with FastAPI.
 
