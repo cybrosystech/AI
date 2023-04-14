@@ -227,7 +227,7 @@ Run the following command in the terminal
 ```
 git clone https://github.com/cybrosystech/Voice-ChatBot.git
 
-cd voice-ChatBot
+cd AI/Voice-ChatBot/
 
 sudo bash setup.sh
 
