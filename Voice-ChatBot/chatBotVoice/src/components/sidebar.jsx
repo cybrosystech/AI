@@ -54,6 +54,7 @@ export default function Sidebar() {
                 type="text"
                 name="name"
                 id="name"
+                autoComplete="off"
                 className="form-control"
                 value={api ? api : ""}
                 onChange={onApiChange}

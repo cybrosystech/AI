@@ -8,21 +8,28 @@ export default function Message({message}) {
     const [playc, setPlayc] = useState(false)
     return(
         <li className={message.ownedByCurrentUser ? 'sent' : 'replies'}>
-            {message.ownedByCurrentUser ? <img src="/src/images/cybrosys.png" alt="" /> : <img src="/src/images/icon.png" alt="" />}
-            <p style={message.ownedByCurrentUser ? { position: "relative"} : { position: "relative", paddingLeft: "30px"}}>{message.body}
-            {message.isVoice && (
-                <FontAwesomeIcon icon={playc ? faStop : faPlay} onClick={() => {
-                    if(!isPlaying){
-                        setIsChatOnGoing(true);
-                        play(message.voice);
-                        setPlayc(true)
-                    } else {
-                        pause();
-                        setPlayc(false)
-                    }
-                }} style={message.ownedByCurrentUser ? {bottom: "5px", right: "10px", position: "absolute"} : {bottom: "5px", left: "10px", position: "absolute"}} />
-                
-            )}</p>
+            <div className='bot' style={message.ownedByCurrentUser ? {float: "left"} : {float: "right"}}>
+                {message.ownedByCurrentUser ? <img src="/src/images/logo.png" alt="bot" /> : <img src="/src/images/icon.png" alt="user" />}
+            </div>
+            <div className={message.ownedByCurrentUser ? 'bot-msg' : 'user-msg'}>
+                <span>{message.body}</span>
+                <div className="play-icon-bot">
+                    {message.isVoice && (
+                        <span>
+                            <FontAwesomeIcon icon={playc ? faStop : faPlay} onClick={() => {
+                                if(!isPlaying){
+                                    setIsChatOnGoing(true);
+                                    play(message.voice);
+                                    setPlayc(true)
+                                } else {
+                                    pause();
+                                    setPlayc(false)
+                                }
+                            }} />
+                        </span>
+                    )}
+                </div>
+            </div>
         </li>
     )
 }

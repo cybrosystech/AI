@@ -65,24 +65,37 @@ export default function ChatFrame (){
         <div id="frame">
             <div className="content">
                 <div className="contact-profile">
-                    <img src="/src/images/cybrosys.png" alt="" />
-                    <p>ChatBot</p>
-                    <Sidebar/>
+                    <div className="profile-m-head">
+                        <img src="/src/images/logo.png" alt="g2"/>
+                        <span>Cybrosys</span>
+                    </div>
+                    <div className="setting-icon">
+                        <Sidebar/>
+                    </div>
                 </div>
                 <Messages/>
                 <div className="message-input">
-                    <div className="wrap">
-                        <input type="text" placeholder="Write your message..." ref={mesgRef} onKeyDown={
+                    <div className="chat-input">
+                        <input type="text" placeholder="Enter your message." ref={mesgRef} onKeyDown={
                             (ev) => {
                                 if(ev.key === "Enter" && !isChatOnGoing && apiKey){
                                     onSend(ev);
                                 }
                             }
                         }/>
-                        <Recorder Render={RecorderUI}/>
-                        <button className="submit" onClick={onSend} disabled={isChatOnGoing || !apiKey}>
-                            <FontAwesomeIcon icon={faPaperPlane} />
-                        </button>
+                        <ul className="chat-controls">
+                            <li></li>
+                            <li>
+                            <button className="submit submit-btn" onClick={onSend} disabled={isChatOnGoing || !apiKey}>
+                                    <FontAwesomeIcon icon={faPaperPlane}/>
+                                </button>
+                            </li>
+                            <li>
+                            <Recorder Render={RecorderUI}/>
+
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
             </div>
