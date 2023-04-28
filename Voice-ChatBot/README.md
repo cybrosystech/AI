@@ -28,7 +28,7 @@ Conversion notes:
 
 The potential of voice chatbots to deliver a more personalized and interactive experience has made their adoption more and more widespread in recent years. In this blog, we will explore the features and functions of a voice chatbot that utilizes multilingual voice and text support, React, GPT-3.5 turbo language model, Whisper AI, and a Python backend with FastAPI.
 
-![chatbot](https://user-images.githubusercontent.com/129945593/230543732-6905365f-f093-4fe8-a6d4-466f3f81ab8b.png)
+![chatupdt](https://user-images.githubusercontent.com/129945593/235127475-ab72e8a8-d26b-48fd-80e1-dbc6e1a1e6ac.png)
 
 
 **Multilingual Voice and Text Support**
